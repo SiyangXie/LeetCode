@@ -92,7 +92,7 @@ class Solution:
 #### 4. Medium of two sorted arrays
 There are two sorted arrays nums1 and nums2 of size m and n respectively.<br>
 Find the median of the two sorted arrays. The overall run time complexity should be O(log (m+n)).<br>
-(You may assume nums1 and nums2 cannot be both empty.)<br>
+(You may assume nums1 and nums2 cannot be both empty.)<br><br>
 Example 1:
 ```bash
 nums1 = [1, 3]
