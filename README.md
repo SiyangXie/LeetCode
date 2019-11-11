@@ -89,7 +89,7 @@ class Solution:
             usedChar[s[i]] = i
         return maxLength
 ```
-#### 4. Medium of two sorted arrays
+#### 4. Mediam of two sorted arrays
 There are two sorted arrays nums1 and nums2 of size m and n respectively.<br>
 Find the median of the two sorted arrays. The overall run time complexity should be O(log (m+n)).<br>
 (You may assume nums1 and nums2 cannot be both empty.)<br><br>
