@@ -29,7 +29,7 @@ Output: 7 -> 0 -> 8
 Explanation: 342 + 465 = 807.
 ```
 Solution:
-```python3
+```python
 # Definition for singly-linked list.
 # class ListNode:
 #     def __init__(self, x):
@@ -52,4 +52,39 @@ class Solution:
             n.next = ListNode(val)
             n = n.next
         return root.next
+```
+#### 3. Longest Substring Without Repeating Characters
+Given a string, find the length of the longest substring without repeating characters.<br><br>
+Example 1:
+```bash
+Input: "abcabcbb"
+Output: 3 
+Explanation: The answer is "abc", with the length of 3. 
+```
+Example 2:
+```bash
+Input: "bbbbb"
+Output: 1
+Explanation: The answer is "b", with the length of 1.
+```
+Example 3:
+```bash
+Input: "pwwkew"
+Output: 3
+Explanation: The answer is "wke", with the length of 3. 
+             Note that the answer must be a substring, "pwke" is a subsequence and not a substring.
+```
+```python
+class Solution:
+    def lengthOfLongestSubstring(self, s: str) -> int:
+        start = maxLength = 0
+        usedChar = {}
+        
+        for i in range(len(s)):
+            if s[i] in usedChar and start <= usedChar[s[i]]:
+                start = usedChar[s[i]] + 1
+            else:
+                maxLength = max(maxLength, i - start + 1)
+            usedChar[s[i]] = i
+        return maxLength
 ```
